@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TrustMed — Dataset Quality Control Report</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0b0f19; color: #f8fafc; padding: 30px; line-height: 1.5; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { font-size: 2.2rem; color: #38bdf8; margin: 0 0 8px 0; }
+        .subtitle { color: #94a3b8; font-size: 1.05rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TRUSTMED — Dataset Quality Control Report</h1>
+            <p class="subtitle">Automated Multi-Specialty Dataset Integrity, Patient Splitting, and Anomaly Verification</p>
+        </header>
+        
+        <div style="background:#1e293b; border:1px solid #334155; border-radius:12px; padding:20px; margin-bottom:24px; box-shadow:0 10px 25px rgba(0,0,0,0.3);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; border-bottom:1px solid #334155; padding-bottom:10px;">
+                <h3 style="margin:0; font-size:1.3rem; color:#38bdf8;">NIH ChestX-ray14 <span style="font-size:0.85rem; color:#94a3b8; font-weight:normal;">(Lung — Chest X-ray (Frontal CXR))</span></h3>
+                <span style="background:#0284c7; color:#fff; padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:bold;">multi_label_classification</span>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:12px; margin-bottom:16px;">
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Images</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f8fafc;">40</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Patients / Subjects</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f8fafc;">10</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Corrupt / Missing</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#10b981;">0</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Duplicates</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f59e0b;">32</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Imbalance Ratio</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f8fafc;">2.0x</div>
+                </div>
+                
+            </div>
+            <div style="margin-top:14px;">
+                <h4 style="color:#cbd5e1; font-size:0.9rem; margin-bottom:8px;">Class / Label Distribution:</h4>
+                <table style="width:100%; border-collapse:collapse; font-size:0.85rem; color:#e2e8f0; background:#0f172a; border-radius:8px; overflow:hidden;">
+                    <tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Cardiomegaly</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>8</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Effusion</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>10</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Infiltration</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>14</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Atelectasis</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>16</td></tr>
+                </table>
+            </div>
+            <div style="margin-top:12px; font-size:0.75rem; color:#64748b;">
+                <strong>License:</strong> CC0: Public Domain / NIH Clinical Center | <strong>Citation:</strong> Wang et al., ChestX-ray8: Hospital-scale Chest X-ray Database and Benchmarks, CVPR 2017
+            </div>
+        </div>
+        
+        <div style="background:#1e293b; border:1px solid #334155; border-radius:12px; padding:20px; margin-bottom:24px; box-shadow:0 10px 25px rgba(0,0,0,0.3);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; border-bottom:1px solid #334155; padding-bottom:10px;">
+                <h3 style="margin:0; font-size:1.3rem; color:#38bdf8;">BraTS 2021 <span style="font-size:0.85rem; color:#94a3b8; font-weight:normal;">(Brain — Brain MRI (T1, T1ce, T2, FLAIR 2D Slices))</span></h3>
+                <span style="background:#0284c7; color:#fff; padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:bold;">tumor_segmentation</span>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:12px; margin-bottom:16px;">
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Images</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f8fafc;">30</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Patients / Subjects</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f8fafc;">10</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Corrupt / Missing</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#10b981;">0</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Duplicates</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f59e0b;">28</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Imbalance Ratio</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f8fafc;">4.0x</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Empty Masks</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f8fafc;">6</div>
+                </div>
+            </div>
+            <div style="margin-top:14px;">
+                <h4 style="color:#cbd5e1; font-size:0.9rem; margin-bottom:8px;">Class / Label Distribution:</h4>
+                <table style="width:100%; border-collapse:collapse; font-size:0.85rem; color:#e2e8f0; background:#0f172a; border-radius:8px; overflow:hidden;">
+                    <tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Normal / Non-Tumor</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>6</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Tumor Present</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>24</td></tr>
+                </table>
+            </div>
+            <div style="margin-top:12px; font-size:0.75rem; color:#64748b;">
+                <strong>License:</strong> CBICA / BraTS Challenge Academic Use License | <strong>Citation:</strong> Baid et al., The RSNA-ASNR-MICCAI BraTS 2021 Benchmark, arXiv 2021
+            </div>
+        </div>
+        
+        <div style="background:#1e293b; border:1px solid #334155; border-radius:12px; padding:20px; margin-bottom:24px; box-shadow:0 10px 25px rgba(0,0,0,0.3);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; border-bottom:1px solid #334155; padding-bottom:10px;">
+                <h3 style="margin:0; font-size:1.3rem; color:#38bdf8;">ISIC 2019 <span style="font-size:0.85rem; color:#94a3b8; font-weight:normal;">(Skin — Dermoscopy)</span></h3>
+                <span style="background:#0284c7; color:#fff; padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:bold;">multi_class_classification</span>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:12px; margin-bottom:16px;">
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Images</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f8fafc;">40</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Patients / Subjects</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f8fafc;">10</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Corrupt / Missing</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#10b981;">0</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Duplicates</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f59e0b;">37</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Imbalance Ratio</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f8fafc;">1.0x</div>
+                </div>
+                
+            </div>
+            <div style="margin-top:14px;">
+                <h4 style="color:#cbd5e1; font-size:0.9rem; margin-bottom:8px;">Class / Label Distribution:</h4>
+                <table style="width:100%; border-collapse:collapse; font-size:0.85rem; color:#e2e8f0; background:#0f172a; border-radius:8px; overflow:hidden;">
+                    <tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Melanoma (MEL)</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>5</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Melanocytic Nevus (NV)</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>5</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Basal Cell Carcinoma (BCC)</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>5</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Actinic Keratosis (AK)</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>5</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Benign Keratosis (BKL)</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>5</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Dermatofibroma (DF)</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>5</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Vascular Lesion (VASC)</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>5</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>Squamous Cell Carcinoma (SCC)</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>5</td></tr>
+                </table>
+            </div>
+            <div style="margin-top:12px; font-size:0.75rem; color:#64748b;">
+                <strong>License:</strong> CC-BY-NC 4.0 / International Skin Imaging Collaboration | <strong>Citation:</strong> Tschandl et al., The HAM10000 dataset, Scientific Data 2018; Codella et al., ISIC 2019 Challenge
+            </div>
+        </div>
+        
+        <div style="background:#1e293b; border:1px solid #334155; border-radius:12px; padding:20px; margin-bottom:24px; box-shadow:0 10px 25px rgba(0,0,0,0.3);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; border-bottom:1px solid #334155; padding-bottom:10px;">
+                <h3 style="margin:0; font-size:1.3rem; color:#38bdf8;">APTOS 2019 <span style="font-size:0.85rem; color:#94a3b8; font-weight:normal;">(Retina — Retinal Fundus Photography)</span></h3>
+                <span style="background:#0284c7; color:#fff; padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:bold;">diabetic_retinopathy_grading</span>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:12px; margin-bottom:16px;">
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Images</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f8fafc;">40</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Patients / Subjects</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f8fafc;">20</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Corrupt / Missing</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#10b981;">0</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Duplicates</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f59e0b;">37</div>
+                </div>
+                <div style="background:#0f172a; padding:12px; border-radius:8px;">
+                    <div style="color:#94a3b8; font-size:0.75rem;">Imbalance Ratio</div>
+                    <div style="font-size:1.4rem; font-weight:bold; color:#f8fafc;">1.0x</div>
+                </div>
+                
+            </div>
+            <div style="margin-top:14px;">
+                <h4 style="color:#cbd5e1; font-size:0.9rem; margin-bottom:8px;">Class / Label Distribution:</h4>
+                <table style="width:100%; border-collapse:collapse; font-size:0.85rem; color:#e2e8f0; background:#0f172a; border-radius:8px; overflow:hidden;">
+                    <tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>0 - No DR</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>8</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>1 - Mild</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>8</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>2 - Moderate</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>8</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>3 - Severe</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>8</td></tr><tr><td style='padding:6px 10px; border-bottom:1px solid #334155;'>4 - Proliferative DR</td><td style='padding:6px 10px; border-bottom:1px solid #334155; font-weight:600;'>8</td></tr>
+                </table>
+            </div>
+            <div style="margin-top:12px; font-size:0.75rem; color:#64748b;">
+                <strong>License:</strong> APTOS / Kaggle Competition Academic License | <strong>Citation:</strong> Asia Pacific Tele-Ophthalmology Society (APTOS) 2019 Blindness Detection
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

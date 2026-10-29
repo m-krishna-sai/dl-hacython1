@@ -1,0 +1,112 @@
+# ==============================================================================
+# 1. Datasets & Raw Data (Crucial: keeps your repository lightweight)
+# ==============================================================================
+data/
+*.zip
+*.tar.gz
+*.tar
+*.rar
+*.7z
+
+# ==============================================================================
+# 2. Python & Bytecode
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+
+# ==============================================================================
+# 3. Testing & Coverage
+# ==============================================================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# ==============================================================================
+# 4. Virtual Environments & Secrets
+# ==============================================================================
+.env
+.env.*
+!.env.example
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==============================================================================
+# 5. Frontend & Node.js
+# ==============================================================================
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+dist/
+dist-ssr/
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==============================================================================
+# 6. Jupyter Notebooks
+# ==============================================================================
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# ==============================================================================
+# 7. IDE, Editors & OS Files
+# ==============================================================================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swo
+
+# ==============================================================================
+# 8. (Optional) Large Model Weights
+# Uncomment below if you want to host weights on HuggingFace/Drive instead:
+# ==============================================================================
+# *.pth
+# *.pt
+# *.onnx
+# *.h5
+# *.ckpt

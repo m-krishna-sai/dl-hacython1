@@ -1,0 +1,36 @@
+{
+  "benchmark_timestamp": "2026-09-12T13:38:00Z",
+  "device": "cpu",
+  "cpu_info": "Intel Core i5-1334U (12GB RAM, Iris Xe Graphics)",
+  "model_loading_latency_ms": 953.8,
+  "single_image_stage_breakdown_ms": {
+    "total": 415.7,
+    "quality": 0.7,
+    "routing": 0.9,
+    "inference": 124.6,
+    "trust_engine": 287.6
+  },
+  "batch_scaling": {
+    "1_images": {
+      "total_latency_ms": 416.7,
+      "average_per_image_ms": 416.7,
+      "throughput_images_per_sec": 2.4
+    },
+    "2_images": {
+      "total_latency_ms": 746.6,
+      "average_per_image_ms": 373.3,
+      "throughput_images_per_sec": 2.68
+    },
+    "3_images": {
+      "total_latency_ms": 1154.4,
+      "average_per_image_ms": 384.8,
+      "throughput_images_per_sec": 2.6
+    },
+    "4_images": {
+      "total_latency_ms": 1559.8,
+      "average_per_image_ms": 389.9,
+      "throughput_images_per_sec": 2.56
+    }
+  },
+  "memory_rss_mb": 590.2
+}

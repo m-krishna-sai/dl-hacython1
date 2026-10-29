@@ -1,0 +1,219 @@
+{
+  "evaluation_timestamp": "2026-09-12T10:12:44Z",
+  "device": "cpu",
+  "total_training_time_seconds": 3116.8,
+  "models": {
+    "lung": {
+      "macro_auroc": 0.6552,
+      "sensitivity": 0.0092,
+      "specificity": 0.9961,
+      "precision": 0.0106,
+      "recall": 0.0092,
+      "accuracy": 0.9449,
+      "temperature": 1.148,
+      "sensitivity_at_0_50": 0.0092,
+      "specificity_at_0_50": 0.9961,
+      "accuracy_at_0_50": 0.9449,
+      "threshold_analysis": {
+        "0.50": {
+          "sensitivity": 0.0092,
+          "specificity": 0.9961,
+          "accuracy": 0.9449
+        },
+        "0.20": {
+          "sensitivity": 0.1261,
+          "specificity": 0.9458,
+          "accuracy": 0.9112
+        },
+        "0.10": {
+          "sensitivity": 0.2587,
+          "specificity": 0.8662,
+          "accuracy": 0.8516
+        },
+        "0.05": {
+          "sensitivity": 0.4225,
+          "specificity": 0.719,
+          "accuracy": 0.7226
+        },
+        "val_optimal_youden_0.02": {
+          "sensitivity": 0.7426,
+          "specificity": 0.4063,
+          "accuracy": 0.4364
+        }
+      }
+    },
+    "brain": {
+      "slices_evaluated": 708,
+      "tumor_bearing_slices": 364,
+      "overall_slice_dice": 0.3754,
+      "overall_slice_iou": 0.3699,
+      "tumor_slice_dice": 0.0241,
+      "tumor_slice_iou": 0.0134,
+      "global_voxel_dice": 0.0473,
+      "global_voxel_iou": 0.0242,
+      "global_sensitivity": 0.0624,
+      "global_specificity": 0.9872,
+      "dice": 0.0473,
+      "iou": 0.0242,
+      "sensitivity": 0.0624,
+      "specificity": 0.9872,
+      "subset_150_slices_metrics": {
+        "slices_evaluated": 150,
+        "empty_fallback_slice_dice": 0.7105,
+        "empty_fallback_slice_iou": 0.7105,
+        "tumor_slice_dice": 0.0,
+        "tumor_slice_iou": 0.0,
+        "global_voxel_dice": 0.0
+      }
+    },
+    "skin": {
+      "accuracy": 0.6861,
+      "precision": 0.5705,
+      "recall": 0.4324,
+      "sensitivity": 0.4324,
+      "macro_auroc": 0.8922,
+      "confusion_matrix": [
+        [
+          34,
+          39,
+          2,
+          0,
+          4,
+          0,
+          2,
+          0
+        ],
+        [
+          6,
+          216,
+          3,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          6,
+          47,
+          3,
+          2,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          4,
+          5,
+          0,
+          3,
+          0,
+          0,
+          1
+        ],
+        [
+          10,
+          19,
+          4,
+          3,
+          11,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          4,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          7,
+          0
+        ],
+        [
+          2,
+          4,
+          4,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "specificity": 0.9375,
+      "ece": 0.0742,
+      "temperature": 1.294
+    },
+    "retina": {
+      "accuracy": 0.6936,
+      "precision": 0.6733,
+      "recall": 0.6666,
+      "sensitivity": 0.6666,
+      "macro_auroc": 0.9061,
+      "confusion_matrix": [
+        [
+          44,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          24,
+          2,
+          2,
+          1
+        ],
+        [
+          0,
+          7,
+          27,
+          9,
+          2
+        ],
+        [
+          1,
+          0,
+          8,
+          12,
+          2
+        ],
+        [
+          0,
+          7,
+          4,
+          6,
+          13
+        ]
+      ],
+      "specificity": 0.9244,
+      "ece": 0.1042,
+      "temperature": 1.33
+    }
+  },
+  "ablation_study": {
+    "baseline_resnet18": {
+      "lung_auroc": 0.6552,
+      "params_millions": 11.2
+    },
+    "attention_resnet18_cbam": {
+      "lung_auroc": 0.6728,
+      "params_millions": 11.4
+    }
+  }
+}

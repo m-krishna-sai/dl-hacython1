@@ -1,0 +1,113 @@
+# TRUSTMED Dataset Configuration
+# Defines dataset metadata, paths, classes, modalities, and licenses
+
+app:
+  name: "TrustMed"
+  version: "1.0.0"
+  mode: "development" # "development" (fast CPU/laptop mode with sample verification) or "evaluation" (full datasets)
+  device: "cpu"       # Intel Core i5-1334U friendly
+  random_seed: 42
+
+splits:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  split_by_subject: true # Hard requirement: never allow slices/images from same patient in train and test
+
+datasets:
+  lung:
+    name: "NIH ChestX-ray14"
+    specialty: "Lung"
+    modality: "Chest X-ray (Frontal CXR)"
+    task: "multi_label_classification"
+    data_dir: "data/lung"
+    license: "CC0: Public Domain / NIH Clinical Center"
+    citation: "Wang et al., ChestX-ray8: Hospital-scale Chest X-ray Database and Benchmarks, CVPR 2017"
+    model_type: "resnet18"
+    input_size: [224, 224]
+    channels: 3
+    num_classes: 14
+    classes:
+      - "Atelectasis"
+      - "Cardiomegaly"
+      - "Effusion"
+      - "Infiltration"
+      - "Mass"
+      - "Nodule"
+      - "Pneumonia"
+      - "Pneumothorax"
+      - "Consolidation"
+      - "Edema"
+      - "Emphysema"
+      - "Fibrosis"
+      - "Pleural_Thickening"
+      - "Hernia"
+    loss: "BCEWithLogitsLoss"
+    metrics: ["macro_auroc", "sensitivity", "specificity", "precision", "recall", "f1"]
+    recommended_specialist: "Pulmonology / Radiology"
+
+  brain:
+    name: "BraTS 2021"
+    specialty: "Brain"
+    modality: "Brain MRI (T1, T1ce, T2, FLAIR 2D Slices)"
+    task: "tumor_segmentation"
+    data_dir: "data/brain"
+    license: "CBICA / BraTS Challenge Academic Use License"
+    citation: "Baid et al., The RSNA-ASNR-MICCAI BraTS 2021 Benchmark, arXiv 2021"
+    model_type: "unet"
+    input_size: [224, 224]
+    channels: 3
+    num_classes: 1 # Abnormality / Tumor mask
+    segmentation_classes:
+      - "Whole Tumor / Abnormality"
+    classification_target: "Tumor Presence / High-Grade Finding"
+    loss: "CombinedBCEAndDiceLoss"
+    metrics: ["dice", "iou", "sensitivity", "specificity"]
+    recommended_specialist: "Neurology / Neurosurgery / Neuroradiology"
+
+  skin:
+    name: "ISIC 2019"
+    specialty: "Skin"
+    modality: "Dermoscopy"
+    task: "multi_class_classification"
+    data_dir: "data/skin"
+    license: "CC-BY-NC 4.0 / International Skin Imaging Collaboration"
+    citation: "Tschandl et al., The HAM10000 dataset, Scientific Data 2018; Codella et al., ISIC 2019 Challenge"
+    model_type: "resnet18"
+    input_size: [224, 224]
+    channels: 3
+    num_classes: 8
+    classes:
+      - "Melanoma (MEL)"
+      - "Melanocytic Nevus (NV)"
+      - "Basal Cell Carcinoma (BCC)"
+      - "Actinic Keratosis (AK)"
+      - "Benign Keratosis (BKL)"
+      - "Dermatofibroma (DF)"
+      - "Vascular Lesion (VASC)"
+      - "Squamous Cell Carcinoma (SCC)"
+    loss: "CrossEntropyLoss"
+    metrics: ["macro_auroc", "sensitivity", "specificity", "accuracy", "precision", "recall", "f1"]
+    recommended_specialist: "Dermatology"
+
+  retina:
+    name: "APTOS 2019"
+    specialty: "Retina"
+    modality: "Retinal Fundus Photography"
+    task: "diabetic_retinopathy_grading"
+    data_dir: "data/retina"
+    license: "APTOS / Kaggle Competition Academic License"
+    citation: "Asia Pacific Tele-Ophthalmology Society (APTOS) 2019 Blindness Detection"
+    model_type: "resnet18"
+    input_size: [224, 224]
+    channels: 3
+    num_classes: 5
+    classes:
+      - "0 - No DR"
+      - "1 - Mild"
+      - "2 - Moderate"
+      - "3 - Severe"
+      - "4 - Proliferative DR"
+    loss: "CrossEntropyLoss"
+    metrics: ["macro_auroc", "sensitivity", "specificity", "accuracy", "precision", "recall", "quadratic_kappa"]
+    recommended_specialist: "Ophthalmology"

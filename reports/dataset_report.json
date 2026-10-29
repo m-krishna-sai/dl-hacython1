@@ -1,0 +1,141 @@
+{
+  "application": "TrustMed \u2014 Self-Aware Multi-Specialty Medical AI",
+  "inspection_timestamp": "2026-09-12T12:50:00Z",
+  "datasets": {
+    "lung": {
+      "dataset": "NIH ChestX-ray14",
+      "specialty": "Lung",
+      "modality": "Chest X-ray (Frontal CXR)",
+      "task": "multi_label_classification",
+      "license": "CC0: Public Domain / NIH Clinical Center",
+      "citation": "Wang et al., ChestX-ray8: Hospital-scale Chest X-ray Database and Benchmarks, CVPR 2017",
+      "num_images": 40,
+      "num_subjects": 10,
+      "corrupt_files": 0,
+      "missing_files": 0,
+      "duplicate_hashes": 32,
+      "class_distribution": {
+        "Cardiomegaly": 8,
+        "Effusion": 10,
+        "Infiltration": 14,
+        "Atelectasis": 16
+      },
+      "empty_masks": 0,
+      "invalid_annotations": 0,
+      "imbalance_ratio": 2.0,
+      "dimensions": {
+        "min": [
+          224,
+          224
+        ],
+        "max": [
+          224,
+          224
+        ],
+        "channels": 3
+      }
+    },
+    "brain": {
+      "dataset": "BraTS 2021",
+      "specialty": "Brain",
+      "modality": "Brain MRI (T1, T1ce, T2, FLAIR 2D Slices)",
+      "task": "tumor_segmentation",
+      "license": "CBICA / BraTS Challenge Academic Use License",
+      "citation": "Baid et al., The RSNA-ASNR-MICCAI BraTS 2021 Benchmark, arXiv 2021",
+      "num_images": 30,
+      "num_subjects": 10,
+      "corrupt_files": 0,
+      "missing_files": 0,
+      "duplicate_hashes": 28,
+      "class_distribution": {
+        "Normal / Non-Tumor": 6,
+        "Tumor Present": 24
+      },
+      "empty_masks": 6,
+      "invalid_annotations": 0,
+      "imbalance_ratio": 4.0,
+      "dimensions": {
+        "min": [
+          224,
+          224
+        ],
+        "max": [
+          224,
+          224
+        ],
+        "channels": 3
+      }
+    },
+    "skin": {
+      "dataset": "ISIC 2019",
+      "specialty": "Skin",
+      "modality": "Dermoscopy",
+      "task": "multi_class_classification",
+      "license": "CC-BY-NC 4.0 / International Skin Imaging Collaboration",
+      "citation": "Tschandl et al., The HAM10000 dataset, Scientific Data 2018; Codella et al., ISIC 2019 Challenge",
+      "num_images": 40,
+      "num_subjects": 10,
+      "corrupt_files": 0,
+      "missing_files": 0,
+      "duplicate_hashes": 37,
+      "class_distribution": {
+        "Melanoma (MEL)": 5,
+        "Melanocytic Nevus (NV)": 5,
+        "Basal Cell Carcinoma (BCC)": 5,
+        "Actinic Keratosis (AK)": 5,
+        "Benign Keratosis (BKL)": 5,
+        "Dermatofibroma (DF)": 5,
+        "Vascular Lesion (VASC)": 5,
+        "Squamous Cell Carcinoma (SCC)": 5
+      },
+      "empty_masks": 0,
+      "invalid_annotations": 0,
+      "imbalance_ratio": 1.0,
+      "dimensions": {
+        "min": [
+          224,
+          224
+        ],
+        "max": [
+          224,
+          224
+        ],
+        "channels": 3
+      }
+    },
+    "retina": {
+      "dataset": "APTOS 2019",
+      "specialty": "Retina",
+      "modality": "Retinal Fundus Photography",
+      "task": "diabetic_retinopathy_grading",
+      "license": "APTOS / Kaggle Competition Academic License",
+      "citation": "Asia Pacific Tele-Ophthalmology Society (APTOS) 2019 Blindness Detection",
+      "num_images": 40,
+      "num_subjects": 20,
+      "corrupt_files": 0,
+      "missing_files": 0,
+      "duplicate_hashes": 37,
+      "class_distribution": {
+        "0 - No DR": 8,
+        "1 - Mild": 8,
+        "2 - Moderate": 8,
+        "3 - Severe": 8,
+        "4 - Proliferative DR": 8
+      },
+      "empty_masks": 0,
+      "invalid_annotations": 0,
+      "imbalance_ratio": 1.0,
+      "dimensions": {
+        "min": [
+          224,
+          224
+        ],
+        "max": [
+          224,
+          224
+        ],
+        "channels": 3
+      }
+    }
+  }
+}
