@@ -1,18 +1,20 @@
 # ==============================================================================
-# 1. Datasets & Raw Data (Crucial: keeps your repository lightweight)
+# Unified TRUSTMED .gitignore (Single Root Location)
 # ==============================================================================
-data/
-*.zip
-*.tar.gz
-*.tar
-*.rar
-*.7z
 
-# ==============================================================================
+# 1. Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
 # 2. Python & Bytecode
-# ==============================================================================
 __pycache__/
 *.py[cod]
+*.pyc
+*.pyo
 *$py.class
 *.so
 .Python
@@ -32,9 +34,33 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 
-# ==============================================================================
-# 3. Testing & Coverage
-# ==============================================================================
+# 3. Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# 4. Jupyter Notebooks & Checkpoints
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# 5. Datasets & Raw Large Data Archives
+data/
+*.zip
+*.tar.gz
+*.tar
+*.rar
+*.7z
+
+# 6. Frontend & Node.js Dependencies
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+dist/
+dist-ssr/
+*.local
+
+# 7. Testing & Quality Caches
 .pytest_cache/
 .coverage
 .coverage.*
@@ -44,31 +70,7 @@ coverage.xml
 *.cover
 *.py,cover
 
-# ==============================================================================
-# 4. Virtual Environments & Secrets
-# ==============================================================================
-.env
-.env.*
-!.env.example
-venv/
-.venv/
-env/
-ENV/
-env.bak/
-venv.bak/
-
-# ==============================================================================
-# 5. Frontend & Node.js
-# ==============================================================================
-node_modules/
-frontend/node_modules/
-frontend/dist/
-frontend/dist-ssr/
-dist/
-dist-ssr/
-*.local
-
-# Logs
+# 8. Logs
 logs/
 *.log
 npm-debug.log*
@@ -77,15 +79,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# ==============================================================================
-# 6. Jupyter Notebooks
-# ==============================================================================
-.ipynb_checkpoints/
-*-checkpoint.ipynb
-
-# ==============================================================================
-# 7. IDE, Editors & OS Files
-# ==============================================================================
+# 9. IDE, Editors & OS Files
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
@@ -100,13 +94,3 @@ Desktop.ini
 *.sln
 *.sw?
 *.swo
-
-# ==============================================================================
-# 8. (Optional) Large Model Weights
-# Uncomment below if you want to host weights on HuggingFace/Drive instead:
-# ==============================================================================
-# *.pth
-# *.pt
-# *.onnx
-# *.h5
-# *.ckpt
